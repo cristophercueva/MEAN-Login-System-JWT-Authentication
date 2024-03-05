@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Login Example</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+ 
+      <li class="nav-item">
+        <a class="nav-link active" *ngIf="!flag"   routerLink="/login">Login</a>
+      </li>
+      
+      <li class="nav-item"  >
+        <a class="nav-link" *ngIf="!flag"  routerLink="/signup">SignUp</a>
+      </li>
+      <li class="nav-item"  >
+        <a class="nav-link"   routerLink="/dynamicForm">Dynamic Form Example</a>
+      </li>
+      <li class="nav-item"  >
+        <a class="nav-link"   routerLink="/datePicker">Date Picker Example</a>
+      </li>
+      <li class="nav-item"  >
+        <a class="nav-link" *ngIf="flag" (click)="logout()">Logout</a>
+      </li>
+      <li class="nav-item"  >
+        <a class="nav-link" *ngIf="flag" routerLink="/dashboard">Dashboard</a>
+      </li>
+   
+    </ul>
+  
+  </div>
+</nav>
+<router-outlet></router-outlet>
